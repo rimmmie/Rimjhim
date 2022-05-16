@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: light green;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            padding: 16px;
+            background-color: lightgray;
+        }
+        
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: white
+        }
+        
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: beige;
+            outline: none;
+        }
+        
+        hr {
+            border: 1px solid white;
+            margin-bottom: 25px;
+        }
+        
+        .registration {
+            background-color: aqua;
+            color: beige;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        
+        .registration:hover {
+            opacity: 1;
+        }
+        
+        a {
+            color: blue
+        }
+        
+        .signin {
+            background-color: white;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <h1> Registration</h1>
+            <p>click on registration to create a form </p>
+            <hr>
+
+            <labelfor="Name"><b> Name </b></labelfor>
+                <input type="text" placeholder="enter name" name="name" id="nameid" required>
+                <labelfor="Mobile no"><b> Mobile no </b></labelfor>
+                    <input type="text" placeholder="enter mobile no" name="mobile" id="mobile" required>
+                    <labelfor="Email"><b> Email </b></labelfor>
+                        <input type="text" placeholder="enter email" name="email" id="emailid" required>
+                        <labelfor="Password"><b> Password </b></labelfor>
+                            <input type="text" placeholder="enter password" name="psw" id="pswid" required>
+                            <labelfor="Forgot Password"><b> Forgot Password</b></labelfor>
+                                <input type="text" placeholder="enter forgotpassword" name="pws" id="psw frogotid" required>
+                                <hr>
+
+                                <p> creating a registratio form you must have to read
+                                    <a href="#" Terms and Condition</a></p>
+
+                                <button type="button"> onclick ("lstorage")> Register </button>
+
+        </div>
+        <div class="container signin">
+            <p> Already have an account? <a href="#"> Sign in </a></p>
+
+        </div>
+
+    </form>
+
+</body>
+
+<script>
+    lstorage();
+
+    function lstorage() {
+
+        var Name = document.getElementById("Name").value;
+        var Mobile = document.getElementById("Mobile").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var forgot password = document.getElementById("forgot password").value;
+        console.log(Name, Mobile, Email, password, forgot, password)
+        localstorage.setItem("Name", name)
+        localstorage.setItem("Mobile", Mobile)
+        localstorage.setItem("email", email)
+        localstorage.setItem("password", password)
+        localstorage.setItem("forgot password", forgot password)
+    }
+</script>
+
+</html>
